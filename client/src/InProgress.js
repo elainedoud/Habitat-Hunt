@@ -5,7 +5,6 @@ function InProgress({category}){
     return (
 
     <div>
-        console.log(category.category_name)
         {category.category_name.map((category_name) =>{
             return (<div key={category_name.id} category_name={category_name}>
                 {category_name.first_category.listings.map((listing) =>{
@@ -18,6 +17,8 @@ function InProgress({category}){
     }
     </div>
     )}
+
+    //I don't think category.category_name is an array, which is why it is causing issues
 /*
       (  <div>
             <p>Name: {category.listing.apartment_name}</p>

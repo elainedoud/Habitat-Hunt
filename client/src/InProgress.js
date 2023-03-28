@@ -19,6 +19,7 @@ function InProgress({category}){
     )}
 
     //I don't think category.category_name is an array, which is why it is causing issues
+    // Look at information being pulled via useEffect on App, to determine how to parse it
 /*
       (  <div>
             <p>Name: {category.listing.apartment_name}</p>

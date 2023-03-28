@@ -1,5 +1,5 @@
 class CategorySerializer < ActiveModel::Serializer
-  attributes :id, :in_progress, :not_selected, :accepted
+  attributes :id, :category_name
 
   has_many :listings
 end

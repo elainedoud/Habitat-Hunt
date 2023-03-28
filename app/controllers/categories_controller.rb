@@ -8,7 +8,7 @@ end
 private
 
 def category_params
-    params.permit(:in_progress, :not_selected, :accepted)
+    params.permit(:category_name)
 end    
 
 

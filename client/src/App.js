@@ -19,6 +19,16 @@ function App() {
 
   console.log(categories)
 
+  const [listings, setListings] = useState([])
+
+  useEffect(() =>{
+    fetch("/listing")
+    .then(res => res.json())
+    .then(listings => setListings(listings))
+  }, [])
+
+  console.log(listings)
+
   return (
     <div className="App">
         <header>

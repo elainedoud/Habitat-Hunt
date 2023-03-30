@@ -10,6 +10,11 @@ def index
     render json: listings
 end
 
+def inprogress
+    listings = Listing.joins(:categories).where(categories: {category_name:"In Progress"})
+    render json: listings
+end
+
 private
 
 def listing_params
@@ -17,3 +22,4 @@ def listing_params
 end
 
 end
+

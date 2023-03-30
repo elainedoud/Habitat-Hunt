@@ -9,25 +9,13 @@ import {Route, Switch} from 'react-router-dom'
 
 function App() {
 
-  const [categories, setCategories] = useState([])
+  const [inprogresslists, setInprogresslists] = useState([])
 
   useEffect(() =>{
-    fetch("/category")
+    fetch("/inprogress")
     .then(res => res.json())
-    .then(categories => setCategories(categories))
+    .then(inprogresslists => setInprogresslists(inprogresslists))
   }, [])
-
-  console.log(categories)
-
-  const [listings, setListings] = useState([])
-
-  useEffect(() =>{
-    fetch("/listing")
-    .then(res => res.json())
-    .then(listings => setListings(listings))
-  }, [])
-
-  console.log(listings)
 
   return (
     <div className="App">
@@ -42,8 +30,8 @@ function App() {
             </Route>
             <Route exact path="/inprogress">
               <div>
-                {categories.map(category =>{
-                    return <InProgress key={category.id} category={category}/>})}
+                {inprogresslists.map(inprogresslist =>{
+                    return <InProgress key={inprogresslist.id} inprogresslist={inprogresslist}/>})}
               </div>
             </Route>
             <Route exact path="/notselected">
@@ -57,23 +45,5 @@ function App() {
     </div>
   );
 }
-
-/*
-
-const [listings, setListings] = useState([])
-
-  useEffect(() =>{
-    fetch("/listing")
-    .then(res => res.json())
-    .then(listings => setListings(listings))
-  }, [])
-
-      <Route exact path="/inprogress">
-              <div>
-                {listings.map(listing =>{
-                    return <InProgress key={listing.id} listing={listing}/>})}
-              </div>
-            </Route>
-*/
 
 export default App;

@@ -3,21 +3,21 @@ import {Link} from 'react-router-dom';
 
 function NavBar(){
     return (
-        <div>
-            <nav>
+        <div class="container">
+            <nav class="navbar navbar-expand">
                 <div>
-                    <ul>
-                        <li>
-                            <Link to="/listingform">New Listing Form</Link>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <Link to="/listingform" class="nav-link">New Listing Form</Link>
                         </li>
-                        <li>
-                            <Link to="/inprogress">In Progress</Link>
+                        <li class="nav-item">
+                            <Link to="/inprogress" class="nav-link">In Progress</Link>
                         </li>
-                        <li>
-                            <Link to="/notselected">Not Selected</Link>
+                        <li class="nav-item">
+                            <Link to="/notselected" class="nav-link">Not Selected</Link>
                         </li>
-                        <li>
-                            <Link to="/accepted">Accepted</Link>
+                        <li class="nav-item">
+                            <Link to="/accepted" class="nav-link">Accepted</Link>
                         </li>
                     </ul>
                 </div>

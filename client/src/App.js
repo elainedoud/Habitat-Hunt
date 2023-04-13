@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
         <header>
-          <h1 className="App-link">Habitat Hunt</h1>
+         <h1 className="App-title">Habitat Hunt</h1>
         </header>
         <Switch>
           <Route path="/">

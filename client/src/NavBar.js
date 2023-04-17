@@ -14,10 +14,10 @@ function NavBar(){
                             <Link to="/inprogress" class="nav-link text-primary">In Progress</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to="/notselected" class="nav-link">Not Selected</Link>
+                            <Link to="/notselected" class="nav-link text-primary">Not Selected</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to="/accepted" class="nav-link">Accepted</Link>
+                            <Link to="/accepted" class="nav-link text-primary">Accepted</Link>
                         </li>
                     </ul>
                 </div>

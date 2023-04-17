@@ -2,14 +2,15 @@ import React from 'react';
 
 function InProgress({inprogresslist}){
 
-    return (        
-            <div>
-                <p>Name: {inprogresslist.apartment_name}</p>
-                <p>Address: {inprogresslist.address}</p>
-                <p>Price: ${inprogresslist.price}</p>
-                <p>Contact: {inprogresslist.contact_info}</p>
-                <p>Website: {inprogresslist.website}</p>
-                <p>Comment: {inprogresslist.comment}</p>
+    return (<div class="card">   
+            <div class="card-body bg-light">
+                <h6 class="card-title text-start">Name: {inprogresslist.apartment_name}</h6>
+                <h6 class="card-text text-start">Address: {inprogresslist.address}</h6>
+                <h6 class="card-text text-start">Price: ${inprogresslist.price}</h6>
+                <h6 class="card-text text-start">Contact: {inprogresslist.contact_info}</h6>
+                <h6 class="card-text text-start">Website: {inprogresslist.website}</h6>
+                <h6 class="card-text text-start">Comment: {inprogresslist.comment}</h6>
+            </div>
             </div>
 
     )

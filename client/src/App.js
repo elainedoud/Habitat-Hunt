@@ -29,7 +29,7 @@ function App() {
               <ListingForm />
             </Route>
             <Route exact path="/inprogress">
-              <div>
+              <div class="container">
                 {inprogresslists.map(inprogresslist =>{
                     return <InProgress key={inprogresslist.id} inprogresslist={inprogresslist}/>})}
               </div>

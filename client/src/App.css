@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -26,16 +27,3 @@
   color: #30106b;
 }
 
-.App-link-not-being-used :hover{
-  color: #30106b;
-}
-
-.App-link-not-being-used {
-  text-decoration: none;
-}
-
-.App-link-container-not-being-used {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}

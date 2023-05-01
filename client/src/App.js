@@ -30,8 +30,10 @@ function App() {
             </Route>
             <Route exact path="/inprogress">
               <div class="container">
+                <div class="row">
                 {inprogresslists.map(inprogresslist =>{
                     return <InProgress key={inprogresslist.id} inprogresslist={inprogresslist}/>})}
+              </div>
               </div>
             </Route>
             <Route exact path="/notselected">

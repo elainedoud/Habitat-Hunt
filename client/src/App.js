@@ -10,11 +10,25 @@ import {Route, Switch} from 'react-router-dom'
 function App() {
 
   const [inprogresslists, setInprogresslists] = useState([])
+  const [notselectedlists, setNotselectedlists] = useState([])
+  const [acceptedlists, setAcceptedlists] = useState([])
 
   useEffect(() =>{
     fetch("/inprogress")
     .then(res => res.json())
     .then(inprogresslists => setInprogresslists(inprogresslists))
+  }, [])
+
+  useEffect(() =>{
+    fetch("/notselected")
+    .then(res => res.json())
+    .then(notselectedlists => setNotselectedlists(notselectedlists))
+  }, [])
+
+  useEffect(() =>{
+    fetch("/accepted")
+    .then(res => res.json())
+    .then(acceptedlists => setAcceptedlists(acceptedlists))
   }, [])
 
   return (
@@ -37,10 +51,21 @@ function App() {
               </div>
             </Route>
             <Route exact path="/notselected">
-              <NotSelected />
+              <div class="container">
+                <div class="row">
+              {notselectedlists.map(notselectedlist =>{
+                return <NotSelected key={notselectedlist.id} notselectedlist={notselectedlist}/>}
+              )}
+                </div>
+              </div>
             </Route>
-            <Route>
-             <Accepted exact path="/accepted"/>
+            <Route exact path="/accepted">
+              <div class="container">
+                <div class="row">
+                  {acceptedlists.map(acceptedlist =>{
+                    return <Accepted key={acceptedlist.id} acceptedlist={acceptedlist}/>})}
+                </div>
+                </div>
             </Route>
           </Route>
         </Switch>

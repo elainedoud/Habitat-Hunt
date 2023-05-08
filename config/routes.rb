@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/listing", to: "listings#index"
   get "/category", to: "categories#index"
   get "/inprogress", to: "listings#inprogress"
+  get "/notselected", to: "listings#notselected"
+  get "/accepted", to: "listings#accepted"
   post "/create", to: "listings#create"
 
 end

@@ -15,6 +15,16 @@ def inprogress
     render json: listings
 end
 
+def notselected
+    listings = Listing.joins(:categories).where(categories: {category_name:"Not Selected"})
+    render json: listings
+end
+
+def accepted
+    listings = Listing.joins(:categories).where(categories: {category_name:"Accepted"})
+    render json: listings
+end
+
 private
 
 def listing_params

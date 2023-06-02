@@ -4,9 +4,26 @@ interface CardProps{
   inprogresslist: object;
 }
 
-function InProgress({inprogresslist}: CardProps) {
+interface CustomInputProps {
+    apartment_name: string;
+    address: string;
+    price: string;
+    contact_info: string;
+    website: string;
+    comment: string;
+}
 
-    return (
+class CustomInput extends React<CustomInputProps> {
+    render() {
+      return <input name={this.props.apartment_name} />;
+    }
+  }
+
+
+
+const InProgress = ({inprogresslist}: CardProps, {CustomInputProps}: ) =>
+
+    {return (
             <div class="col-md-6 p-3">
                 <div class="card border-secondary border-3">
                     <div class="card-block shadow-lg">  
@@ -23,6 +40,10 @@ function InProgress({inprogresslist}: CardProps) {
             </div>
 
     )
-}
+    }
+
 
 export default InProgress
+
+// Does not seem like "class" can be fixed, but maybe the project will compile anyway. 
+// Now trying to fix apartment.name, address, ect.

@@ -4,26 +4,26 @@ interface CardProps{
   inprogresslist: object;
 }
 
-interface CustomInputProps {
-    apartment_name: string;
-    address: string;
-    price: string;
-    contact_info: string;
-    website: string;
-    comment: string;
+type object = {
+    apartment_name?: string;
+    address?: string;
+    price?: string;
+    contact_info?: string;
+    website?: string;
+    comment?: string;
 }
 
-class CustomInput extends React<CustomInputProps> {
-    render() {
-      return <input name={this.props.apartment_name} />;
-    }
-  }
+//class CustomInput extends React<CustomInputProps> {
+    //render() {
+      //return <input name={this.props.apartment_name} />;
+    //}
+  //}
 
 
 
-const InProgress = ({inprogresslist}: CardProps, {CustomInputProps}: ) =>
+function InProgress ({inprogresslist}: CardProps){
 
-    {return (
+    return (
             <div class="col-md-6 p-3">
                 <div class="card border-secondary border-3">
                     <div class="card-block shadow-lg">  
@@ -47,3 +47,4 @@ export default InProgress
 
 // Does not seem like "class" can be fixed, but maybe the project will compile anyway. 
 // Now trying to fix apartment.name, address, ect.
+// I think I need to find a resource for learning TypeScript for React; googling is not working

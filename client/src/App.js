@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import NavBar from './NavBar';
-import ListingForm from './ListingForm';
+import ListingForm from './ListingForm.tsx';
 import InProgress from './InProgress.tsx';
 import NotSelected from './NotSelected';
 import Accepted from './Accepted';
@@ -31,6 +31,11 @@ function App() {
     .then(acceptedlists => setAcceptedlists(acceptedlists))
   }, [])
 
+  function makeNewCard(newCard){
+    const arrayNewCards = [...inprogresslists, newCard]
+    setInprogresslists(arrayNewCards)
+  }
+
   return (
     <div className="App">
         <header>
@@ -40,7 +45,7 @@ function App() {
           <Route path="/">
               <NavBar />
             <Route exact path="/listingform">
-              <ListingForm />
+              <ListingForm makeNewCard={makeNewCard}/>
             </Route>
             <Route exact path="/inprogress">
               <div class="container">

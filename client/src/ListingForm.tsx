@@ -1,7 +1,10 @@
 import React from 'react';
 
 interface ListingFormProps {
-    makeNewCard: object;
+    makeNewCard: {
+        description: string;
+        (newCard: object): object;
+    }
 }
 
 function ListingForm({makeNewCard}: ListingFormProps){
@@ -55,7 +58,6 @@ function ListingForm({makeNewCard}: ListingFormProps){
 
 export default ListingForm
 
-//Need to define preventDefault, makeNewCard, and onSubmit TypeScript
 // Is website compiling? 
 // Test form out  [New Card Information should appear on InProgress Page]
 // If form successfully works, figure out how to remove any extra information from project

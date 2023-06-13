@@ -45,7 +45,7 @@ function App() {
           <Route path="/">
               <NavBar />
             <Route exact path="/listingform">
-              <ListingForm makeNewCard={makeNewCard}/>
+              <ListingForm key={makeNewCard.id} makeNewCard={makeNewCard}/>
             </Route>
             <Route exact path="/inprogress">
               <div class="container">

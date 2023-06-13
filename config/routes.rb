@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get "/notselected", to: "listings#notselected"
   get "/accepted", to: "listings#accepted"
   post "/create", to: "listings#create"
+  post "/newinprogress", to: "listings#create"
 
 end

@@ -66,11 +66,3 @@ function ListingForm({makeNewCard}: ListingFormProps){
 
 
 export default ListingForm
-
-// Questions Debugging Have Brought Up
-    // Why does the information in the form not disappear when it is submitted?
-            // Attempting solutions, but it has not worked yet
-    // Why is my post not persisting? It disappears when the page is refreshed
-
-// Test form out  [New Card Information should appear on InProgress Page]
-// If form successfully works, figure out how to remove any extra information from project

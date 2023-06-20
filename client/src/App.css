@@ -32,3 +32,8 @@
 .Light-text {
   color: gray;
 }
+
+.Theform {
+  display: flex;
+  margin-top: 8px;
+}

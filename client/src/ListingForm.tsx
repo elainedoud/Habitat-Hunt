@@ -44,22 +44,28 @@ function ListingForm({makeNewCard}: ListingFormProps){
     }
 
     return (
-        <div>
+        <div className="col-md-5 p-3">
+        <div className="card border-secondary border-3">
+        <div className="card-block shadow-lg">
+        <div className="card-body bg-light">
         <form onSubmit={handleSubmit}>
-            <label form="new-apartment-name">Name of Apartment Complex: </label>
-            <input type="text" name="new-apartment-name" value={name} onChange={(e) => setName(e.target.value)}/>
-            <label form="new-apartment-address">Address of Apartment: </label>
-            <input type="text" name="new-apartment-address" value={address} onChange={(e) => setAddress(e.target.value)}/>
-            <label form="new-apartment-price">Price: </label>
-            <input type="text" name="new-apartment-price" value={price} onChange={(e) => setPrice(e.target.value)}/>
-            <label form="new-apartment-contact">Name of Contact Person: </label>
-            <input type="text" name="new-apartment-contact" value={contact} onChange={(e) => setContact(e.target.value)}/>
-            <label form="new-apartment-website">Website: </label>
-            <input type="text" name="new-apartment-website" value={website} onChange={(e) => setWebsite(e.target.value)}/>
-            <label form="new-apartment-comment">Comment: </label>
-            <input type="text" name="new-apartment-comment" value={comment} onChange={(e) => setComment(e.target.value)}/>
-            <button type="submit">Enter</button>
+            <label form="new-apartment-name" className="Theform">Name of Apartment Complex: </label>
+            <input type="text" name="new-apartment-name"className="Theform" value={name} onChange={(e) => setName(e.target.value)}/>
+            <label form="new-apartment-address" className="Theform">Address of Apartment: </label>
+            <input type="text" name="new-apartment-address" className="Theform" value={address} onChange={(e) => setAddress(e.target.value)}/>
+            <label form="new-apartment-price" className="Theform">Price: </label>
+            <input type="text" name="new-apartment-price" className="Theform" value={price} onChange={(e) => setPrice(e.target.value)}/>
+            <label form="new-apartment-contact" className="Theform">Name of Contact Person: </label>
+            <input type="text" name="new-apartment-contact" className="Theform" value={contact} onChange={(e) => setContact(e.target.value)}/>
+            <label form="new-apartment-website" className="Theform">Website: </label>
+            <input type="text" name="new-apartment-website" className="Theform" value={website} onChange={(e) => setWebsite(e.target.value)}/>
+            <label form="new-apartment-comment" className="Theform">Comment: </label>
+            <input type="text" name="new-apartment-comment" className="Theform" value={comment} onChange={(e) => setComment(e.target.value)}/>
+            <button type="submit" className="Theform">Enter</button>
         </form>
+        </div>
+        </div>
+        </div>
         </div>
     )
 }

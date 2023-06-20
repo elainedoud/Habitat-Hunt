@@ -45,7 +45,9 @@ function App() {
           <Route path="/">
               <NavBar />
             <Route exact path="/listingform">
+              <div class="container d-flex align-items-center justify-content-center">
               <ListingForm key={makeNewCard.id} makeNewCard={makeNewCard}/>
+              </div>
             </Route>
             <Route exact path="/inprogress">
               <div class="container">

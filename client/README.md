@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+Habitat Hunt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description: 
+This web application makes it easier for an apartment hunter (or house hunter) to keep track of different listing options.  The motivation was my own anxiety about needing to 
+find a new apartment.  I remembered it was a stressful process keeping track of potential listings, who I had spoken to, and comparing price vs. location.  
 
-## Available Scripts
+Habitat Hunt makes it easy for the user to add apartment listings (including contact numbers and the user's comments) as well as organize the listings according to categories. The categories for listings are In Progress, Not Selected, and Accepted.
 
-In the project directory, you can run:
 
-### `npm start`
+Technology Used:
+The web application is a React.js frontend built on a Ruby on Rails backend.  There are Ruby models which are supported by PostgreSQL and connected with a join table. I have also added TypeScript to help prevent bugs during further development.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Challenges:
+Initially I had difficulty displaying the listings by category on separate pages of the web application.  Because of how my models where setup, I would have to drill down multiple layers into my React code to pull the listings by category.  I resolved this by creating methods for each category within the Listing Controller.  This allowed me to query for the appropriate category and then send that data to my frontend.  An additional challenge was adding TypeScript to my application because it was my first time working with interfaces for props.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Features:
+Category Pages - Separate pages display the three different categories of listings.
+New Listing Form - Form to add additional apartment listing to the application.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Goal for Future Development:
+- Add functionality so user can easily update the category of an existing listing
+- Allow users to delete a listing
+- Create an option for users to see listings in one column (rather than two)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To View: 
+- Clone directory
+- Install NPM package
+- On one port (in one terminal) run Rails (rails s)
+- In another port (in another terminal) run NPM (start npm --prefix client)

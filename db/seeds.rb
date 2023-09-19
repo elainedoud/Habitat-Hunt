@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Clearing existing data..."
+Listing.destroy_all
+Category.destroy_all
+Connector.destroy_all
+
 puts "Seeding data"
 
 first_listing = Listing.create(apartment_name: "The Orchard", address: "505 Main Street, Smithtown", price: "1575", contact_info: "Jackie at x5567", website: "rent@theorchard.com", comment: "Beautiful and near train. Favorite so far")
